@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+// carry look ahead
 module cla#(parameter size=16,parameter Gsize=4)(input [size:1] a, input [size:1] b, input cin,
                              output [size:1] sum ,output  cout);
 wire [size:0] p;
@@ -38,7 +38,7 @@ generate
      end
    end
  endgenerate
-
+// sum logic
 genvar x;
   generate
   for(x=1;x<=size;x=x+1)
